@@ -1,0 +1,14 @@
+public void checkBalance (){
+    BankAccount account = findAccount();
+    //printing customer's name, number of account, and account balance
+    System.out.println("Customer Name: " + account.getCustomerFullName);
+    System.out.println("Account number: " + account.getNumberOfAccounts);
+    System.out.println("Balance: $" + account.getBalance);
+
+    //checking account type
+    if (account instanceof CheckingAccount) {
+        CheckingAccount checkingAccount = CheckingAccount (account);
+        System.out.println("Account: " + account.getAccountType);
+        System.out.println("Daily Withdrawal Limit: $" + checkingAccount.getDailyWithdrawalLimit());
+    }
+}
