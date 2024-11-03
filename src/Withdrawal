@@ -1,8 +1,11 @@
 private static void makeWithdrawal () throws CustomerAccountNotFoundException, NegativeDollarAmountException, InsufficientFundsExceptions  {
     BankAccount account = findAccount();
     System.out.println("Enter withdrawal amount: ");
+
     //prompt withdrawal amount
     double amount = input.nextDouble();
+
     //amount is subtracted from balance
     acount.withdrawlAmount(amount);
     System.out.println("Withdrawal successful. New balance: " + account.getBalance());
+}
